@@ -26,8 +26,7 @@ app.get("/data", (req, res) => {
   res.cookie("login", "sany", {
     maxAge: 1000 * 60 * 60 * 24 * 7,
     httpOnly: false,
-    SameSite: "None",
-    // signed: true,
+    sameSite: "none",
   });
   res.status(200).json({
     country: "Bangladesh",
