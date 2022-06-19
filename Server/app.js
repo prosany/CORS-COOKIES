@@ -7,11 +7,10 @@ const app = express();
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://cors-and-cookies.netlify.app",
     methods: "GET",
     credentials: true,
     "Access-Control-Allow-Credentials": true,
-    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Origin": ["https://cors-and-cookies.netlify.app"],
     "Access-Control-Allow-Headers": "*",
   })
 );
