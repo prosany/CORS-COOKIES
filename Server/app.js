@@ -9,6 +9,10 @@ app.use(
   cors({
     origin: "https://cors-and-cookies.netlify.app",
     methods: "GET",
+    credentials: true,
+    "Access-Control-Allow-Credentials": true,
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "*",
   })
 );
 app.use(express.json());
@@ -22,6 +26,7 @@ app.get("/data", (req, res) => {
   res.cookie("login", "sany", {
     maxAge: 1000 * 60 * 60 * 24 * 7,
     httpOnly: false,
+    SameSite: "None",
     // signed: true,
   });
   res.status(200).json({
