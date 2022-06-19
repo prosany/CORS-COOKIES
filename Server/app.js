@@ -27,6 +27,7 @@ app.get("/data", (req, res) => {
     maxAge: 1000 * 60 * 60 * 24 * 7,
     httpOnly: false,
     sameSite: "none",
+    secure: false,
   });
   res.status(200).json({
     country: "Bangladesh",
