@@ -7,7 +7,7 @@ const app = express();
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://127.0.0.1:5500",
+    origin: "https://cors-and-cookies.netlify.app",
     methods: "GET",
   })
 );
