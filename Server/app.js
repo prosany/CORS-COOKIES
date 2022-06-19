@@ -28,6 +28,7 @@ app.get("/data", (req, res) => {
     country: "Bangladesh",
     city: "Dhaka",
     degination: "Software Engineer",
+    cookie: JSON.stringify(req.cookies),
   });
 });
 
